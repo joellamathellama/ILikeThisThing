@@ -92,4 +92,19 @@ $scope.addToDb = function(apiResp) {
 
  };
 
+$scope.test = function(){
+  Factory.test()
+    .then(function(res){
+      $scope.books = res.data.collection1;
+    })
+    .catch(function(err){
+      console.log("TEST ERR", err);
+    })
+};
+
+
+$scope.test();
+
+
+>>>>>>> added a top20 amazon web scrape
 });

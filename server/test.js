@@ -120,6 +120,7 @@ module.exports = {
           "text": "10-Day Green Smoothie Cleanse"
         }
       }
+
     ],
     "collection2": [
       {
