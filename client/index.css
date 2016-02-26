@@ -136,3 +136,34 @@ h4 {
     border-radius: 10px;
     box-shadow: 5px 5px 2px #888888
 }
+
+.twitterButton {
+ position:absolute;
+ top:0;
+ left:0;
+/*  list-style-type: none;
+ margin: 0;
+ padding: 0;
+ display: inline*/
+}
+
+.fb-like {
+ position:absolute;
+ top:0;
+ left:9%;
+}
+
+.gitFork {
+ position:absolute;
+ top:0;
+ left:15.5%;
+}
+
+ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+}
+li {
+ display: inline;
+}
