@@ -4,6 +4,7 @@ var routes = express.Router();
 require('./db');
 var db = require('./dbRequests.js');
 var api = require('./apiHandlers.js');
+var test = require('./test.js');
 //
 //route to your index.html
 //
@@ -140,6 +141,11 @@ routes.use(express.static(assetFolder));
       .catch(function(err){
         throw new Error(err);
       })
+  })
+
+  routes.get('/api/test', function(req, res){
+    console.log('REACHED ROUTES TEST')
+    res.status(200).send(test);
   })
 
   // The Catch-all Route

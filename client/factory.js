@@ -3,6 +3,20 @@ var factories = angular.module('ILikeThis.MyFactories', [])
 
 factories.factory('Factory', function ($http) {
 
+  var test = function(){
+    return $http({
+      method: 'GET',
+      url: '/api/test'
+    })
+    .then(function(res){
+      console.log("REACHED TEST FACTORY", res);
+      return res;
+    })
+    .catch(function(err){
+      return err;
+    })
+  }
+
   var submitForm = function(work) {
     return $http({
       method: 'POST',
@@ -91,6 +105,7 @@ factories.factory('Factory', function ($http) {
   };
 
    return {
+    test:test,
     submitForm: submitForm,
     getMatchingTags: getMatchingTags,
     addToDatabase: addToDatabase,
