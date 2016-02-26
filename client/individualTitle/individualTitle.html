@@ -18,22 +18,28 @@
 
     <div class="review-wrapper">
       <button ng-click='toggleBeans=!toggleBeans' class="review-button">Write a review</button>
-      <form ng-show='toggleBeans' ng-submit='postReview()'>
+      <button ng-click='booBeans=!booBeans' class="review-button">User Reviews</button>
+      <button ng-click='showRecs=!showRecs' class="review-button">Top 20</button>
+      <br>
+      <br>
+      <form id="writeForm" ng-show='toggleBeans' ng-submit='postReview()'>
         <input type='text' ng-model='userName' placeholder='Your Name'></input>
         <input type='text' ng-model='writeTitle' placeholder='Title of Review'></input>
         <textarea ng-model='writeBody' placeholder='Type Here...'></textarea>
         <button type='submit' class="review-button">Submit Review</button>
       </form>
-      <button ng-click='booBeans=!booBeans' class="review-button">User Reviews</button>
       <br>
       <div id='allReviews' ng-show='booBeans'>
         <div ng-repeat="rev in allReviews">
+        <div id="eachReview">
+        <div id="revTitle"><b>{{ rev.reviewtitle }}</b><div>
         <br>
-        <div><b>{{ rev.username }}:</b> {{ rev.reviewtitle }}</div>
-        <br>
-        <div><b>Review:</b> {{ rev.reviewbody }}</div>
-        <br>
-        <br>
+        <div id="revBody">{{ rev.reviewbody }}</div>
+        <hr>
+        <div id="revUsername">{{ rev.username }}</div> 
+      </div>
+      <br>
+      </div>
       </div>
       </div>
 
@@ -42,10 +48,11 @@
 
 
     </div>
+    <div ng-show="showRecs" id="recBooks">
     <div ng-repeat="book in books">
-      <a href="{{ book.book_names.href }}">{{ book.book_names.text }}</a>
+      <a href="{{ book.book_names.href }}" target="_blank">{{ book.book_names.text }}</a>
     </div>
-
+    </div>
   </section>
 
 </div>
