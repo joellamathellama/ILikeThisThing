@@ -10,8 +10,23 @@ app.controller('IndivController', function($scope, $location, Globals, Factory){
 	$scope.writeBody;
 	$scope.allReviews;
 	$scope.userName;
+	$scope.test;
 
-	
+
+	$scope.test = function(){
+	 Factory.test()
+	   .then(function(res){
+	     console.log("TEST RES", res);
+	     $scope.books = res.data.collection1;
+	     console.log("scope test",$scope.test)
+	   })
+	   .catch(function(err){
+	     console.log("TEST ERR", err)
+	   })
+	}
+
+	$scope.test();
+
 
 	$scope.postReview = function(){
 		var obj = {
@@ -45,7 +60,7 @@ app.controller('IndivController', function($scope, $location, Globals, Factory){
 
 	$scope.dosomething = function(){
 		//search $scope.results
-		
+
 	}
 
 	$scope.getReview();
