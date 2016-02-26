@@ -1,5 +1,7 @@
 <div ng-controller='IndivController'>
 
+
+
   <div ng-show="work.type === 'Books'">
   <section id="results" class="individual">
 
@@ -35,6 +37,13 @@
       </div>
       </div>
 
+      <br>
+      <br>
+
+
+    </div>
+    <div ng-repeat="book in books" id="results">
+      <a href="{{ book.book_names.href }}">{{ book.book_names.text }}</a>
     </div>
 
   </section>
