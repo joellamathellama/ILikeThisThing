@@ -115,17 +115,14 @@ h4 {
   font-weight: bolder;
 }
 
-<<<<<<< HEAD
 .individual-text-wrapper{
-
-=======
-.individual-description{
   float: left;
->>>>>>> eb22a24a6c20ea2f530752c035d2b8f827abe8a1
 }
 
 .review-wrapper{
-  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 .review-button{
