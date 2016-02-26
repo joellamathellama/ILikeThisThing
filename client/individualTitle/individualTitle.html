@@ -3,12 +3,11 @@
   <div ng-show="work.type === 'Books'">
   <section id="results" class="individual">
 
+  <div class="individual-text-wrapper">
     <a ng-href="{{work.bookData.infoLink}}"><img class="individual-thumb" ng-src="{{work.thumbnail}}"></a>
-    <div class="individual-text-wrapper">
       <p class="individual-title"><b>{{work.title}}</b></p><br>
       <p class="individual-author"><b>Author(s):</b> {{work.author}}</p>
       <p class="individual-publisher"><b>Publisher:</b> {{work.publisher}}</p>
-      <p class="individual-tags"><b>Tags:</b> {{work.tag}}</p><br><br>
       <hr>
 
       <p class="individual-description"><b>Description:</b> {{work.description}}</p>
@@ -24,12 +23,15 @@
         <button type='submit' class="review-button">Submit Review</button>
       </form>
       <button ng-click='booBeans=!booBeans' class="review-button">User Reviews</button>
-
+      <br>
       <div id='allReviews' ng-show='booBeans'>
         <div ng-repeat="rev in allReviews">
-        <div>{{ rev.username }}</div>
-        <div>{{ rev.reviewtitle }}</div>
-        <div>{{ rev.reviewbody }}</div>
+        <br>
+        <div><b>{{ rev.username }}:</b> {{ rev.reviewtitle }}</div>
+        <br>
+        <div><b>Review:</b> {{ rev.reviewbody }}</div>
+        <br>
+        <br>
       </div>
       </div>
 
