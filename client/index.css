@@ -37,7 +37,22 @@ h4 {
    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
    text-align: center;
  }*/
-
+#eachReview{
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 5px 0px 5px 0px;
+  padding: 5px 5px 5px 5px;
+  background-color: white;
+}
+#revTitle{
+}
+#revBody{
+}
+#revUsername{
+  float:right;
+  font-size: 12px;
+  padding-right: 10px;
+}
  .cover {
   height: 402px;
   width: 279px;
@@ -108,7 +123,11 @@ h4 {
   height: 350px;
   width: 250px;
 }
-
+#writeForm{
+  border:3px solid black;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+}
 .individual-title{
   padding: 10px;
   font-size: 2em;
@@ -122,9 +141,14 @@ h4 {
 .review-wrapper{
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 55%;
 }
-
+#recBooks{
+  border:3px solid black;
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
+  background-color: white;
+}
 .review-button{
     background-color: white;
     padding: 12px 28px;
