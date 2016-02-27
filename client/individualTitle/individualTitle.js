@@ -39,6 +39,7 @@ app.controller('IndivController', function($scope, $location, Globals, Factory){
 		Factory.postReview(obj)
 			.then(function(id){
 				console.log(id)
+				$scope.getReview();
 				return id;
 			})
 			.catch(function(err){
